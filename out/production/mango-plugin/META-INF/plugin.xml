@@ -1,0 +1,39 @@
+<idea-plugin version="2">
+  <id>com.stony.mango.plugin</id>
+  <name>Mango-plugin</name>
+  <version>1.0</version>
+  <vendor email="shi789510@163.com.com" url="http://www.stony.to">Stony</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="139.*" until-build="163.*"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends optional="false">com.intellij.spring</depends>
+  <depends optional="false">com.intellij.database</depends>
+  <depends optional="false">com.intellij.properties</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.stony.mango.plugin.provider.DaoLineMarkerProvider"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
